@@ -50,7 +50,7 @@ export default defineConfig([
   {
     ...COMMON_CFG,
     entry: {
-      'bin/cli': 'src/bin/cli.ts'
+      cli: 'src/bin/cli.ts'
     },
     outDir: 'dist',
     banner: {
