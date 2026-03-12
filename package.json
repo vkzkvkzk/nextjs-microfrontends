@@ -1,6 +1,6 @@
 {
     "name": "nextjs-microfrontends",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Self-hosted microfrontends routing for Next.js — Vercel-independent multi-zone support with dev proxy, middleware, and zone-aware navigation",
     "main": "./dist/index.cjs",
     "module": "./dist/index.js",
