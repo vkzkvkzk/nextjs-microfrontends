@@ -1,0 +1,16 @@
+{
+    "name": "yarn-workspace-example",
+    "private": true,
+    "workspaces": [
+        "apps/*"
+    ],
+    "devDependencies": {
+        "concurrently": "^9.1.0"
+    },
+    "scripts": {
+        "dev": "concurrently --names home,blog,counter \"yarn workspace @example/home run dev\" \"yarn workspace @example/blog run dev\" \"yarn workspace @example/counter run dev\"",
+        "build": "yarn workspaces run build",
+        "start": "concurrently --names home,blog,counter \"yarn workspace @example/home run start\" \"yarn workspace @example/blog run start\" \"yarn workspace @example/counter run start\"",
+        "proxy": "yarn nextjs-microfrontends proxy --local-apps home blog counter --port 4000"
+    }
+}

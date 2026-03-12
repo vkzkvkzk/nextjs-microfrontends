@@ -1,0 +1,16 @@
+{
+    "name": "nx-example",
+    "private": true,
+    "workspaces": [
+        "apps/*"
+    ],
+    "scripts": {
+        "dev": "nx run-many --target=dev --all --parallel=3",
+        "build": "nx run-many --target=build --all",
+        "start": "nx run-many --target=start --all --parallel=3",
+        "proxy": "npx nextjs-microfrontends proxy --local-apps home blog counter --port 4000"
+    },
+    "devDependencies": {
+        "nx": "^20"
+    }
+}

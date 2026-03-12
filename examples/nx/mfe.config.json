@@ -1,0 +1,46 @@
+{
+    "version": "1",
+    "applications": {
+        "home": {
+            "default": true,
+            "development": {
+                "port": 3000
+            },
+            "production": {
+                "url": "http://home:3000"
+            }
+        },
+        "blog": {
+            "routing": [
+                {
+                    "paths": [
+                        "/blog",
+                        "/blog/:path*"
+                    ]
+                }
+            ],
+            "development": {
+                "port": 3001
+            },
+            "production": {
+                "url": "http://blog:3001"
+            }
+        },
+        "counter": {
+            "routing": [
+                {
+                    "paths": [
+                        "/counter",
+                        "/counter/:path*"
+                    ]
+                }
+            ],
+            "development": {
+                "port": 3002
+            },
+            "production": {
+                "url": "http://counter:3002"
+            }
+        }
+    }
+}

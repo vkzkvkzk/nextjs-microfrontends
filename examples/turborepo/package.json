@@ -1,0 +1,17 @@
+{
+    "name": "home-blog-counter-example",
+    "private": true,
+    "packageManager": "npm@11.6.2",
+    "workspaces": [
+        "apps/*"
+    ],
+    "scripts": {
+        "dev": "turbo dev",
+        "build": "turbo build",
+        "start": "turbo start",
+        "proxy": "npx nextjs-microfrontends proxy --local-apps home blog counter --port 4000"
+    },
+    "devDependencies": {
+        "turbo": "^2"
+    }
+}

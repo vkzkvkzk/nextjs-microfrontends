@@ -1,0 +1,10 @@
+{
+    "name": "pnpm-workspace-example",
+    "private": true,
+    "scripts": {
+        "dev": "pnpm --parallel -r run dev",
+        "build": "pnpm -r run build",
+        "start": "pnpm --parallel -r run start",
+        "proxy": "pnpm exec nextjs-microfrontends proxy --local-apps home blog counter --port 4000"
+    }
+}

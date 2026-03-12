@@ -1,0 +1,119 @@
+{
+    "name": "nextjs-microfrontends",
+    "version": "0.1.0",
+    "description": "Self-hosted microfrontends routing for Next.js — Vercel-independent multi-zone support with dev proxy, middleware, and zone-aware navigation",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "sideEffects": false,
+    "license": "MIT",
+    "type": "module",
+    "bin": {
+        "microfrontends": "./dist/bin/cli.js"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./next/config": {
+            "types": "./dist/next/config.d.ts",
+            "import": "./dist/next/config.js",
+            "require": "./dist/next/config.cjs"
+        },
+        "./next/middleware": {
+            "types": "./dist/next/middleware.d.ts",
+            "import": "./dist/next/middleware.js",
+            "require": "./dist/next/middleware.cjs"
+        },
+        "./next/client": {
+            "types": "./dist/next/client.d.ts",
+            "import": "./dist/next/client.js",
+            "require": "./dist/next/client.cjs"
+        },
+        "./next/dev-toolbar": {
+            "types": "./dist/next/dev-toolbar.d.ts",
+            "import": "./dist/next/dev-toolbar.js",
+            "require": "./dist/next/dev-toolbar.cjs"
+        },
+        "./config": {
+            "types": "./dist/config/index.d.ts",
+            "import": "./dist/config/index.js",
+            "require": "./dist/config/index.cjs"
+        }
+    },
+    "files": [
+        "dist/**",
+        "schema.json"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "lint": "eslint \"src/**/*.ts*\"",
+        "clean": "rm -rf dist",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "check-types": "tsc --noEmit",
+        "prepublishOnly": "npm run build"
+    },
+    "dependencies": {
+        "path-to-regexp": "^6.3.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.0.0",
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.2",
+        "@types/jest": "^29.5.12",
+        "@types/node": "^22.0.0",
+        "@types/react": "^19.0.0",
+        "@types/react-dom": "^19.2.3",
+        "eslint": "^9.0.0",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
+        "next": ">=14.0.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.2.4",
+        "ts-jest": "^29.2.0",
+        "tsup": "^8.0.0",
+        "typescript": "^5.6.0",
+        "typescript-eslint": "^8.0.0"
+    },
+    "peerDependencies": {
+        "next": ">=14.0.0",
+        "react": ">=18.0.0"
+    },
+    "peerDependenciesMeta": {
+        "next": {
+            "optional": true
+        },
+        "react": {
+            "optional": true
+        }
+    },
+    "keywords": [
+        "nextjs",
+        "microfrontends",
+        "multi-zone",
+        "micro-frontend",
+        "proxy",
+        "gateway",
+        "routing",
+        "self-hosted",
+        "vercel-independent",
+        "monorepo"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/selta-dev/nextjs-microfrontends.git"
+    },
+    "bugs": {
+        "url": "https://github.com/selta-dev/nextjs-microfrontends/issues"
+    },
+    "homepage": "https://github.com/selta-dev/nextjs-microfrontends#readme",
+    "author": "Selta <dev@selta.co.kr>",
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
