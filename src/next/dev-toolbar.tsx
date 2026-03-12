@@ -396,7 +396,7 @@ export function MfeDevToolbar(
   const [isOpen, setIsOpen] = useState(false);
   const [debugMode, setDebugMode] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const panelRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDialogElement>(null);
   const pillRef = useRef<HTMLButtonElement>(null);
 
   const config = getClientConfig();
@@ -487,7 +487,7 @@ export function MfeDevToolbar(
         <dialog
           open
           id={PANEL_ID}
-          ref={panelRef as React.RefObject<HTMLDialogElement>}
+          ref={panelRef}
           aria-label="Microfrontends developer toolbar"
           style={panelPositionStyle}>
           {/* Header */}
