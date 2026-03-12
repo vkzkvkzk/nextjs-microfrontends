@@ -106,13 +106,13 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/selta-dev/nextjs-microfrontends.git"
+        "url": "git+https://github.com/vkzkvkzk/nextjs-microfrontends.git"
     },
     "bugs": {
-        "url": "https://github.com/selta-dev/nextjs-microfrontends/issues"
+        "url": "https://github.com/vkzkvkzk/nextjs-microfrontends/issues"
     },
-    "homepage": "https://github.com/selta-dev/nextjs-microfrontends#readme",
-    "author": "Selta <dev@selta.co.kr>",
+    "homepage": "https://github.com/vkzkvkzk/nextjs-microfrontends#readme",
+    "author": "vkzkvkzk <vkzkvkzk@icloud.com>",
     "engines": {
         "node": ">=18.0.0"
     }
